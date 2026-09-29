@@ -616,4 +616,3 @@ third_party_libraries:
       js: "https://cdn.jsdelivr.net/npm/venobox@{{version}}/dist/venobox.min.js"
     version: "2.1.8"
 
-
