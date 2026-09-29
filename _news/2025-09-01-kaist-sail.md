@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started the M.S. program in Artificial Intelligence at KAIST and joined the Statistical Artificial Intelligence Lab (SAIL) as a graduate researcher.
+Started the M.S. program in Artificial Intelligence at the Kim Jaechul Graduate School of AI, KAIST, and joined the Statistical Artificial Intelligence Lab (SAIL) as a graduate researcher.

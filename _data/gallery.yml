@@ -1,0 +1,17 @@
+# Add a new image/video entry by copying one of these blocks.
+# For a YouTube item, set youtube_id to the value after "v=" in its URL.
+# For an external photo collection, add its URL to external_gallery_url below.
+external_gallery_url: ""
+items:
+  - title: Research portrait
+    text: A graduate researcher working at the intersection of visual intelligence and generative AI.
+    image: assets/img/sakib_githubio.jpg
+    alt: Portrait of Sakib Hossain
+  - title: Generative AI research
+    text: Research directions in diffusion, flow matching, controllable generation, and visual reasoning.
+    image: assets/img/research-generative.svg
+    alt: Generative AI research illustration
+  - title: 3D vision and world models
+    text: Geometry-aware learning, scene understanding, reconstruction, and physical reasoning.
+    image: assets/img/research-3d.svg
+    alt: 3D vision research illustration

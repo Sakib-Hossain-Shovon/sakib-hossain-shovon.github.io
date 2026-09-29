@@ -3,12 +3,12 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Md Sakib
-middle_name: Hossain
-last_name: Shovon
+first_name: Sakib
+middle_name:
+last_name: Hossain
 contact_note: ""
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Academic research portfolio of Md Sakib Hossain Shovon, researcher and M.S. student in Artificial Intelligence at KAIST.
+  Academic research portfolio of Sakib Hossain, an M.S. student and AI researcher at KAIST.
 footer_text: ""
 keywords: diffusion models, flow matching, physical AI, world models, 3D vision, explainable AI, multimodal foundation models, KAIST
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
