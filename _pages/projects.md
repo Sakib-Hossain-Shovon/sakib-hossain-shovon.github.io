@@ -1,65 +1,33 @@
 ---
 layout: page
-title: projects
+title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Demo research projects in computer vision, generative modeling, and 3D perception.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [research]
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
+<div class="research-home projects">
+  <div class="row">
+    {% assign research_projects = site.projects | where: "category", "research" | sort: "importance" %}
+    {% for project in research_projects %}
+      <div class="col-md-4 mb-4">
+        <article class="research-card">
+          {% if project.youtube_id %}
+            <a class="media-preview" href="{{ project.url | relative_url }}"><img src="https://img.youtube.com/vi/{{ project.youtube_id }}/hqdefault.jpg" alt="Demo YouTube preview for {{ project.title }}"><span class="play-badge"><i class="fa-solid fa-play"></i>Video demo</span></a>
+          {% else %}
+            <a href="{{ project.url | relative_url }}">{% include figure.liquid path=project.img class="mb-0" sizes="360px" alt=project.title %}</a>
+          {% endif %}
+          <div class="research-card-body">
+            <h2>{{ project.title }}</h2><p>{{ project.description }}</p>
+            <div class="project-links">
+              <a href="{{ project.paper }}">Paper</a><a href="{{ project.code }}">Code</a><a href="{{ project.url | relative_url }}">Project</a><a href="{{ project.video }}">Video</a>
+            </div>
+          </div>
+        </article>
+      </div>
     {% endfor %}
   </div>
-  {% endif %}
-  {% endfor %}
-
-{% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
 </div>

@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="research-home">
+  <section class="research-hero">
+    <div class="row align-items-center">
+      <div class="col-lg-8 order-2 order-lg-1">
+        <div class="eyebrow">Academic research portfolio</div>
+        <h1 class="hero-title">Md Sakib Hossain Shovon</h1>
+        <p class="hero-subtitle">M.S. Candidate in Artificial Intelligence at KAIST</p>
+        <p class="hero-copy">I explore how learning-based visual systems can understand, generate, and reason about the dynamic 3D world. My demo research interests span <strong>computer vision</strong>, <strong>generative models</strong>, <strong>video &amp; motion</strong>, and <strong>3D vision</strong>.</p>
+        <div class="hero-actions" aria-label="Professional links">
+          <a class="hero-button primary" href="mailto:replace-me@example.com"><i class="fa-solid fa-envelope"></i>Email <span aria-hidden="true">(Demo)</span></a>
+          <a class="hero-button" href="https://scholar.google.com/citations?user=REPLACE_WITH_SCHOLAR_ID"><i class="ai ai-google-scholar"></i>Google Scholar <span aria-hidden="true">(Demo)</span></a>
+          <a class="hero-button" href="https://github.com/replace-github-username"><i class="fa-brands fa-github"></i>GitHub <span aria-hidden="true">(Demo)</span></a>
+          <a class="hero-button" href="https://www.linkedin.com/in/replace-linkedin-username"><i class="fa-brands fa-linkedin"></i>LinkedIn <span aria-hidden="true">(Demo)</span></a>
+          <a class="hero-button" href="{{ '/assets/pdf/example_pdf.pdf' | relative_url }}"><i class="fa-solid fa-file-arrow-down"></i>CV <span aria-hidden="true">(Demo)</span></a>
+        </div>
+      </div>
+      <div class="col-lg-4 order-1 order-lg-2 text-center">
+        {% include figure.liquid loading="eager" path="assets/img/prof_pic.jpg" class="hero-photo" sizes="300px" alt="Current profile photo placeholder" cache_bust=true %}
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="row"><div class="col-lg-8"><div class="eyebrow">About</div><h2 class="section-heading">Building visual intelligence for a changing world.</h2><p class="hero-copy">I am interested in models that connect visual appearance with motion, geometry, and imagination. This site uses clearly marked demo content while my research record, collaborators, and application materials are being finalized.</p></div></div>
+  </section>
+
+  <section class="home-section">
+    <div class="eyebrow">Selected research</div><h2 class="section-heading">Research directions</h2><p class="section-lead">Three demo flagship projects, each structured for a paper, code release, project page, and video.</p>
+    <div class="row">
+      {% assign featured_projects = site.projects | where: "featured", true | sort: "importance" %}
+      {% for project in featured_projects %}
+        <div class="col-md-4 mb-4"><article class="research-card">
+          {% if project.youtube_id %}<a class="media-preview" href="{{ project.url | relative_url }}"><img src="https://img.youtube.com/vi/{{ project.youtube_id }}/hqdefault.jpg" alt="Demo YouTube preview for {{ project.title }}"><span class="play-badge"><i class="fa-solid fa-play"></i>Video demo</span></a>{% else %}<a href="{{ project.url | relative_url }}">{% include figure.liquid path=project.img class="mb-0" sizes="360px" alt=project.title %}</a>{% endif %}
+          <div class="research-card-body"><h3>{{ project.title }}</h3><p>{{ project.description }}</p><div class="project-links"><a href="{{ project.url | relative_url }}">Project <i class="fa-solid fa-arrow-right"></i></a>{% if project.video %}<a href="{{ project.video }}">YouTube</a>{% endif %}</div></div>
+        </article></div>
+      {% endfor %}
+    </div>
+    <a class="hero-button" href="{{ '/projects/' | relative_url }}">View all demo projects <i class="fa-solid fa-arrow-right"></i></a>
+  </section>
+
+  <section class="home-section">
+    <div class="eyebrow">Research at a glance</div><h2 class="section-heading">Core interests</h2>
+    <div class="interest-grid"><div class="interest-card"><h3>Computer Vision</h3><p>Representation learning, recognition, and visual reasoning.</p></div><div class="interest-card"><h3>Generative Models</h3><p>Controllable visual synthesis and world-aware generation.</p></div><div class="interest-card"><h3>Video &amp; Motion</h3><p>Temporal understanding, prediction, and motion dynamics.</p></div><div class="interest-card"><h3>3D Vision</h3><p>Geometry, reconstruction, and embodied scene understanding.</p></div></div>
+  </section>
+
+  <section class="home-section home-news">
+    <div class="d-flex justify-content-between align-items-end"><div><div class="eyebrow">Recent news</div><h2 class="section-heading">Updates</h2></div><a href="{{ '/news/' | relative_url }}">All news <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="news"><div class="table-responsive"><table class="table table-sm table-borderless">{% assign latest_news = site.news | reverse %}{% for item in latest_news limit: 3 %}<tr><th scope="row">{{ item.date | date: '%b %Y' }}</th><td>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</td></tr>{% endfor %}</table></div></div>
+  </section>
+
+  <section class="home-section home-publications">
+    <div class="d-flex justify-content-between align-items-end"><div><div class="eyebrow">Selected publications</div><h2 class="section-heading">Demo works</h2></div><a href="{{ '/publications/' | relative_url }}">All publications <i class="fa-solid fa-arrow-right"></i></a></div>
+    {% include selected_papers.liquid %}
+  </section>
+</div>
