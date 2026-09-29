@@ -3,9 +3,7 @@
   <div class="footer-links">
     {% include social.liquid %}
     <a href="{{ '/cv/' | relative_url }}" title="CV"><i class="fa-solid fa-file-arrow-down"></i></a>
-    <span class="footer-demo">Demo links</span>
   </div>
-  <div class="footer-credit">{{ site.footer_text }}</div>
   {% if site.impressum_path %}
     <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
   {% endif %}

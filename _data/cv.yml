@@ -1,29 +1,72 @@
 - title: Education
   type: time_table
   contents:
-    - title: M.S. Candidate in Artificial Intelligence
-      institution: KAIST, Daejeon, Republic of Korea
-      year: Present
+    - title: M.S. in Artificial Intelligence
+      institution: Kim Jaechul Graduate School of AI, KAIST, Republic of Korea
+      year: 2025 – Present
       description:
-        - DEMO placeholder — replace with your program dates, advisor, and research details.
+        - Graduate researcher at the Statistical Artificial Intelligence Lab (SAIL).
+        - Advisor: Prof. Jaesik Choi.
+    - title: B.Sc. in Computer Science and Engineering
+      institution: American International University-Bangladesh, Bangladesh
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Graduate Researcher
+      institution: Statistical Artificial Intelligence Lab, KAIST
+      year: 2025 – Present
+      description:
+        - Research in generative AI, visual intelligence, interpretability, and foundation models under Prof. Jaesik Choi.
+    - title: Researcher / Research Collaborator
+      institution: The University of Queensland, Australia
+      year: 2024 – Present
+      description:
+        - Research collaborations in artificial intelligence and machine learning.
+    - title: Research Assistant / Research Collaborator
+      institution: Qatar University, Qatar
+      year: 2024
+      description:
+        - Contributed to research projects in artificial intelligence and machine learning.
+    - title: Trainee Machine Learning Engineer
+      institution: Government EDGE Project, Bangladesh
+      year: 2023
+      description:
+        - Contributed to an automatic Bangla vehicle number plate recognition system for smart toll collection.
+
+- title: Leadership & Community
+  type: time_table
+  contents:
+    - title: Co-Founder & CEO
+      institution: NeuronTreeAI
+      year: 2025 – Present
+      description:
+        - Co-founded a nonprofit AI initiative for education, research mentorship, research collaboration, and accessible advanced AI knowledge.
 
 - title: Research Interests
   type: nested_list
   contents:
-    - title: Computer Vision
+    - title: Diffusion Models & Flow Matching
       items:
-        - Visual representation learning and scene understanding.
-    - title: Generative Models
+        - Generative modeling, stochastic interpolants, sampling and scheduler optimization, and efficient generation.
+    - title: Physical AI & World Models
       items:
-        - Controllable image and world generation.
-    - title: Video, Motion & 3D Vision
+        - Visual world modeling, physical reasoning, embodied and interactive AI, and scene dynamics.
+    - title: 3D Vision & Explainable AI
       items:
-        - Temporal reasoning, reconstruction, and geometry-aware learning.
+        - Geometry-aware learning, reconstruction, representation analysis, and concept disentanglement.
+    - title: Efficient & Multimodal Foundation Models
+      items:
+        - Efficient inference, test-time optimization, vision-language models, and multimodal reasoning.
 
 - title: Selected Projects
   type: time_table
   contents:
-    - title: Demo research portfolio
-      year: 2026
+    - title: SDM Manufacturing Foundation Model Project
+      year: 2025 – Present
       description:
-        - DEMO placeholder — replace with your research projects, publications, and contributions.
+        - A large-scale manufacturing foundation model initiative involving KAIST, POSTECH, SNU, and KETI.
+    - title: Automatic Bangla Number Plate Recognition for Smart Toll Collection
+      year: 2023
+      description:
+        - Government EDGE Project for intelligent toll collection and transportation infrastructure.
