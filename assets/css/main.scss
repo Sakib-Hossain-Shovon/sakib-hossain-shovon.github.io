@@ -59,8 +59,6 @@ $max-content-width: {{ site.max_width }};
 .research-footer { align-items: center; display: flex; flex-wrap: wrap; gap: .5rem 1rem; justify-content: space-between; padding-bottom: 1rem; padding-top: 1rem; }
 .research-footer .footer-links { display: flex; gap: .75rem; }
 .research-footer .footer-links a { color: var(--global-footer-link-color); }
-.research-footer .footer-demo { font-size: .72rem; opacity: .72; }
-.research-footer .footer-credit { font-size: .78rem; }
 .cv-download { background: var(--global-theme-color); border-radius: 999px; color: var(--global-hover-text-color); font-size: .8rem; letter-spacing: 0; padding: .5rem .85rem; }
 .cv-download:hover { color: var(--global-hover-text-color); text-decoration: none; transform: translateY(-1px); }
 

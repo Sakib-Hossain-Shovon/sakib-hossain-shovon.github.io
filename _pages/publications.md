@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Demo publication records — replace these entries with your own BibTeX file when ready.
+description: Selected research publications by Md Sakib Hossain Shovon.
 nav: true
 nav_order: 2
 ---
