@@ -5,15 +5,8 @@ layout: default
   <section class="research-hero">
     <div class="row align-items-center">
       <div class="col-lg-8 order-2 order-lg-1">
-        <div class="eyebrow">Statistical Artificial Intelligence Lab · KAIST AI</div>
-        <h1 class="hero-title">Md Sakib Hossain Shovon</h1>
-        <p class="hero-subtitle">Researcher &amp; M.S. Student in Artificial Intelligence at KAIST</p>
-        <p class="hero-copy">
-          I am a graduate researcher at the Statistical Artificial Intelligence Lab (SAIL), KAIST AI, advised by
-          <a href="https://sail.kaist.ac.kr/en/members/jaesik">Prof. Jaesik Choi</a>. My research focuses on
-          <strong>diffusion and flow matching</strong>, <strong>physical AI and world models</strong>, <strong>3D vision</strong>,
-          <strong>explainable AI</strong>, inference optimization, and multimodal foundation models.
-        </p>
+        <div class="eyebrow">Artificial intelligence research portfolio</div>
+        <h1 class="hero-title">Sakib Hossain</h1>
         <div class="hero-actions" aria-label="Professional links">
           <a class="hero-button primary" href="mailto:sakib@kaist.ac.kr"><i class="fa-solid fa-envelope"></i>Email</a>
           <a class="hero-button" href="https://scholar.google.com/citations?user=9VM2SHYAAAAJ"><i class="ai ai-google-scholar"></i>Google Scholar</a>
@@ -25,7 +18,27 @@ layout: default
         </div>
       </div>
       <div class="col-lg-4 order-1 order-lg-2 text-center">
-        {% include figure.liquid loading="eager" path="assets/img/sakib_githubio.jpg" class="hero-photo" sizes="300px" alt="Portrait of Md Sakib Hossain Shovon" cache_bust=true %}
+        <div id="intro-media" class="carousel slide intro-media" data-ride="carousel" data-interval="5000" aria-label="Research introduction gallery">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              {% include figure.liquid loading="eager" path="assets/img/sakib_githubio.jpg" class="hero-photo" sizes="300px" alt="Portrait of Sakib Hossain" cache_bust=true %}
+              <div class="intro-media-caption">Researcher · builder · mentor</div>
+            </div>
+            <div class="carousel-item">
+              {% include figure.liquid loading="lazy" path="assets/img/research-generative.svg" class="hero-photo intro-illustration" sizes="300px" alt="Generative AI research illustration" %}
+              <div class="intro-media-caption">Generative and visual AI</div>
+            </div>
+            <div class="carousel-item">
+              {% include figure.liquid loading="lazy" path="assets/img/research-3d.svg" class="hero-photo intro-illustration" sizes="300px" alt="3D vision research illustration" %}
+              <div class="intro-media-caption">3D vision and world models</div>
+            </div>
+          </div>
+          <ol class="carousel-indicators intro-indicators">
+            <li data-target="#intro-media" data-slide-to="0" class="active"></li>
+            <li data-target="#intro-media" data-slide-to="1"></li>
+            <li data-target="#intro-media" data-slide-to="2"></li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -34,27 +47,60 @@ layout: default
     <div class="row">
       <div class="col-lg-9">
         <div class="eyebrow">About</div>
-        <h2 class="section-heading">Improving the representations, controllability, and reasoning of visual AI.</h2>
-        <p class="hero-copy">
-          Before joining KAIST, I earned a B.Sc. in Computer Science and Engineering from American International University-Bangladesh. My research
-          experience includes collaborations with The University of Queensland and Qatar University. I am also the Co-Founder &amp; CEO of
-          <a href="https://neurontree.ai/founders-sakib/">NeuronTreeAI</a>, a nonprofit initiative for AI education, research mentorship, and
-          accessible advanced research knowledge.
-        </p>
+        <h2 class="section-heading">Building more capable, efficient, and understandable AI.</h2>
+        <div class="about-copy">
+          <p>
+            Sakib is an <strong>M.S. student in Artificial Intelligence at KAIST</strong> and a researcher at the
+            <strong>Statistical Artificial Intelligence Lab (SAIL)</strong>, Kim Jaechul Graduate School of AI, advised by
+            <a href="https://sail.kaist.ac.kr/en/members/jaesik">Prof. Jaesik Choi</a>. His research spans
+            <strong>diffusion and flow matching</strong>, <strong>physical AI and world models</strong>, <strong>3D vision</strong>,
+            <strong>explainable AI</strong>, inference optimization, and multimodal foundation models—with a particular interest in improving the
+            representations, controllability, efficiency, and reasoning capabilities of modern visual and generative AI systems.
+          </p>
+          <p>
+            Before KAIST, he earned a B.Sc. in Computer Science and Engineering from
+            <strong>American International University-Bangladesh (AIUB)</strong>. His research experience includes collaborations with
+            <strong>The University of Queensland, Australia</strong> and <strong>Qatar University, Qatar</strong>. He is also the
+            <strong>Co-Founder &amp; CEO of <a href="https://neurontree.ai/founders-sakib/">NeuronTreeAI</a></strong
+            >, a nonprofit initiative co-founded with Prof. Mohammad Ali Moni to expand AI education, research mentorship, and access to advanced
+            research knowledge.
+          </p>
+          <p>
+            His long-term goal is to pursue an academic career while building impactful AI technologies and startups that contribute meaningfully to
+            society. He is currently preparing for PhD applications in the United States.
+          </p>
+          <p class="contact-callout">
+            <i class="fa-solid fa-envelope"></i> For research discussions and collaborations, contact
+            <a href="mailto:sakib@kaist.ac.kr">sakib@kaist.ac.kr</a>.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="home-section">
-    <div class="eyebrow">Selected research</div>
+  <section class="home-section home-publications">
+    <div class="d-flex justify-content-between align-items-end">
+      <div>
+        <div class="eyebrow">Research works</div>
+        <h2 class="section-heading">Selected publications</h2>
+      </div>
+      <a href="{{ '/publications/' | relative_url }}">All publications <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    {% include selected_papers.liquid %}
+  </section>
+
+  <section class="home-section conducted-projects">
+    <div class="eyebrow">Conducted projects</div>
     <h2 class="section-heading">Research projects</h2>
     <p class="section-lead">Current and prior applied research initiatives.</p>
     <div class="row">
       {% assign featured_projects = site.projects | where: 'featured', true | sort: 'importance' %}
       {% for project in featured_projects %}
         <div class="col-md-6 mb-4">
-          <article class="research-card">
-            <a href="{{ project.url | relative_url }}">{% include figure.liquid path=project.img class="mb-0" sizes="540px" alt=project.title %}</a>
+          <article class="research-card compact-project-card">
+            <a class="project-thumb" href="{{ project.url | relative_url }}">
+              {%- include figure.liquid path=project.img class="mb-0" sizes="180px" alt=project.title -%}
+            </a>
             <div class="research-card-body">
               <h3>{{ project.title }}</h3>
               <p>{{ project.description }}</p>
@@ -106,23 +152,14 @@ layout: default
           {% assign latest_news = site.news | reverse %}
           {% for item in latest_news limit: 3 %}
             <tr>
-              <th scope="row">{{ item.date | date: '%b %Y' }}</th>
+              <th scope="row">
+                {% if item.date_display %}{{ item.date_display }}{% else %}{{ item.date | date: '%b %Y' }}{% endif %}
+              </th>
               <td>{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}</td>
             </tr>
           {% endfor %}
         </table>
       </div>
     </div>
-  </section>
-
-  <section class="home-section home-publications">
-    <div class="d-flex justify-content-between align-items-end">
-      <div>
-        <div class="eyebrow">Selected publications</div>
-        <h2 class="section-heading">Research works</h2>
-      </div>
-      <a href="{{ '/publications/' | relative_url }}">All publications <i class="fa-solid fa-arrow-right"></i></a>
-    </div>
-    {% include selected_papers.liquid %}
   </section>
 </div>
