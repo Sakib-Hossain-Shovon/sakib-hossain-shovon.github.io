@@ -23,3 +23,50 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+// Portfolio-specific components live here to preserve al-folio's theme architecture.
+.research-home {
+  .research-hero { padding: 4.5rem 0 3.5rem; }
+  .eyebrow { color: var(--global-theme-color); font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+  .hero-title { color: var(--global-text-color); font-size: clamp(2.6rem, 7vw, 5rem); font-weight: 700; letter-spacing: -.055em; line-height: 1.02; margin: .65rem 0; }
+  .hero-subtitle { color: var(--global-text-color-light); font-size: clamp(1.05rem, 2.4vw, 1.35rem); margin-bottom: 1.45rem; }
+  .hero-copy { font-size: 1.14rem; line-height: 1.75; max-width: 43rem; }
+  .hero-photo { border: 1px solid var(--global-divider-color); border-radius: 1.25rem; box-shadow: 0 18px 45px rgba(15, 37, 64, .12); max-width: 300px; }
+  .hero-actions, .project-links { display: flex; flex-wrap: wrap; gap: .65rem; margin-top: 1.65rem; }
+  .hero-button, .project-links a { border: 1px solid var(--global-theme-color); border-radius: 999px; color: var(--global-theme-color); display: inline-flex; font-size: .88rem; font-weight: 600; gap: .4rem; padding: .55rem .9rem; transition: background .2s ease, color .2s ease, transform .2s ease; }
+  .hero-button.primary, .hero-button:hover, .project-links a:hover { background: var(--global-theme-color); color: var(--global-hover-text-color); text-decoration: none; transform: translateY(-2px); }
+  .section-heading { color: var(--global-text-color); font-size: clamp(1.65rem, 4vw, 2.3rem); font-weight: 700; letter-spacing: -.035em; margin-bottom: .35rem; }
+  .section-lead { color: var(--global-text-color-light); margin-bottom: 1.6rem; max-width: 42rem; }
+  .home-section { border-top: 1px solid var(--global-divider-color); padding: 3.8rem 0; }
+  .research-card, .interest-card { background: var(--global-card-bg-color); border: 1px solid var(--global-divider-color); border-radius: 1rem; height: 100%; overflow: hidden; transition: box-shadow .25s ease, transform .25s ease; }
+  .research-card:hover, .interest-card:hover { box-shadow: 0 16px 35px rgba(15, 37, 64, .12); transform: translateY(-4px); }
+  .research-card img { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; }
+  .research-card-body, .interest-card { padding: 1.3rem; }
+  .research-card h3, .interest-card h3 { font-size: 1.12rem; font-weight: 700; }
+  .media-preview { border-radius: .85rem; overflow: hidden; position: relative; }
+  .media-preview .play-badge { align-items: center; background: rgba(8, 29, 59, .9); border-radius: 99px; color: #fff; display: flex; font-size: .8rem; font-weight: 700; gap: .35rem; left: 1rem; padding: .42rem .7rem; position: absolute; top: 1rem; }
+  .interest-grid { display: grid; gap: 1rem; grid-template-columns: repeat(4, 1fr); }
+  .interest-card p { color: var(--global-text-color-light); font-size: .94rem; margin-bottom: 0; }
+  .home-news table { margin-bottom: 0; }
+  .home-news th { color: var(--global-text-color-light); font-size: .82rem; font-weight: 600; white-space: nowrap; }
+  .home-publications .publications { margin-top: 1.25rem; }
+}
+
+.publication-preview-block .row { border-bottom: 1px solid var(--global-divider-color); margin: 0; padding: 1.3rem 0; }
+.publication-preview-block .row:last-child { border-bottom: 0; }
+.projects .card { border: 1px solid var(--global-divider-color); border-radius: 1rem; overflow: hidden; }
+.projects .card .card-img-top { aspect-ratio: 16 / 9; object-fit: cover; }
+.research-footer { align-items: center; display: flex; flex-wrap: wrap; gap: .5rem 1rem; justify-content: space-between; padding-bottom: 1rem; padding-top: 1rem; }
+.research-footer .footer-links { display: flex; gap: .75rem; }
+.research-footer .footer-links a { color: var(--global-footer-link-color); }
+.research-footer .footer-demo { font-size: .72rem; opacity: .72; }
+.research-footer .footer-credit { font-size: .78rem; }
+.cv-download { background: var(--global-theme-color); border-radius: 999px; color: var(--global-hover-text-color); font-size: .8rem; letter-spacing: 0; padding: .5rem .85rem; }
+.cv-download:hover { color: var(--global-hover-text-color); text-decoration: none; transform: translateY(-1px); }
+
+@media (max-width: 767px) {
+  .research-home .research-hero { padding: 2.6rem 0; }
+  .research-home .hero-photo { margin: 0 auto 1.75rem; max-width: 210px; }
+  .research-home .interest-grid { grid-template-columns: repeat(2, 1fr); }
+  .research-home .home-section { padding: 2.7rem 0; }
+}
