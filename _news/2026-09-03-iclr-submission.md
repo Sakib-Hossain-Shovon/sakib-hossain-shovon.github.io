@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Submitted M.S. thesis research from SAIL, KAIST AI to ICLR 2027.
+Submitted my M.S. thesis work to ICLR 2027 from SAIL, KAIST AI.

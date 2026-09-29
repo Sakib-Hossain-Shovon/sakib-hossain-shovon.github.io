@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Submitted a research work to WACV 2027 in collaboration with SAIL, KAIST AI, and NeuronTreeAI.
+Submitted a research work to WACV 2027 in collaboration with SAILab (KAIST AI) and NeuronTreeAI.

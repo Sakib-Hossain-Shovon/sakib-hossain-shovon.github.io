@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Conducted AI and machine-learning research projects as a research assistant associated with Qatar University, Qatar.
+Conducted projects as a Research Assistant associated with Qatar University, Qatar.

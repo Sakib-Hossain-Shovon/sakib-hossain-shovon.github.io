@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Worked as a Trainee Machine Learning Engineer on the Government EDGE Project in Bangladesh, contributing to automatic Bangla number plate recognition for smart toll collection.
+Worked as a Trainee ML Engineer on the Government EDGE Project.

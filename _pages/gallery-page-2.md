@@ -1,21 +1,20 @@
 ---
 layout: page
-title: Gallery
-permalink: /gallery/
-description: Research moments, visual work, and media highlights.
-nav: true
-nav_order: 5
+title: Gallery · More Images
+permalink: /gallery/page-2/
+description: Additional research and professional highlights.
+nav: false
 ---
 
 <div class="gallery-page">
   <div class="gallery-intro">
     <div class="eyebrow">Visual research journal</div>
-    <h2>Research moments and visual ideas</h2>
-    <p>A growing collection of research moments, visual highlights, and media updates.</p>
+    <h2>More images</h2>
+    <p>More research moments and visual highlights will be added here.</p>
   </div>
 
   <div class="gallery-grid">
-    {% for item in site.data.gallery.items %}
+    {% for item in site.data.gallery.more_items %}
       <article class="gallery-card">
         {% if item.youtube_id %}
           <a class="gallery-media media-preview" href="https://www.youtube.com/watch?v={{ item.youtube_id }}" target="_blank" rel="noopener">
@@ -36,18 +35,15 @@ nav_order: 5
           {% if item.more_url %}<a href="{{ item.more_url }}" target="_blank" rel="noopener">More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>{% endif %}
         </div>
       </article>
+    {% else %}
+      <article class="gallery-empty-state">
+        <i class="fa-regular fa-images"></i>
+        <h2>More visual updates coming soon</h2>
+        <p>This page is ready for additional images, captions, and video links.</p>
+      </article>
     {% endfor %}
   </div>
 
-  <div class="gallery-more">
-    <i class="fa-regular fa-images"></i>
-    <div>
-      <h2>More photos</h2>
-      <p>Explore the next page for more visual updates.</p>
-    </div>
-    <a class="hero-button" href="{{ '/gallery/page-2/' | relative_url }}">More images <i class="fa-solid fa-arrow-right"></i></a>
-    {% if site.data.gallery.external_gallery_url != blank %}
-      <a class="hero-button primary" href="{{ site.data.gallery.external_gallery_url }}" target="_blank" rel="noopener">Open photo gallery <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-    {% endif %}
-  </div>
+<a class="gallery-back-link" href="{{ '/gallery/' | relative_url }}"><i class="fa-solid fa-arrow-left"></i> Back to Gallery</a>
+
 </div>

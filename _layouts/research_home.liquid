@@ -21,15 +21,21 @@ layout: default
         <div id="intro-media" class="carousel slide intro-media" data-ride="carousel" data-interval="5000" aria-label="Research introduction gallery">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              {% include figure.liquid loading="eager" path="assets/img/sakib_githubio.jpg" class="hero-photo" sizes="300px" alt="Portrait of Sakib Hossain" cache_bust=true %}
+              <div class="intro-media-frame">
+                {% include figure.liquid loading="eager" path="assets/img/sakib_githubio.jpg" class="hero-photo" sizes="300px" alt="Portrait of Sakib Hossain" cache_bust=true %}
+              </div>
               <div class="intro-media-caption">Researcher · builder · mentor</div>
             </div>
             <div class="carousel-item">
-              {% include figure.liquid loading="lazy" path="assets/img/research-generative.svg" class="hero-photo intro-illustration" sizes="300px" alt="Generative AI research illustration" %}
+              <div class="intro-media-frame">
+                {% include figure.liquid loading="lazy" path="assets/img/research-generative.svg" class="hero-photo intro-illustration" sizes="300px" alt="Generative AI research illustration" %}
+              </div>
               <div class="intro-media-caption">Generative and visual AI</div>
             </div>
             <div class="carousel-item">
-              {% include figure.liquid loading="lazy" path="assets/img/research-3d.svg" class="hero-photo intro-illustration" sizes="300px" alt="3D vision research illustration" %}
+              <div class="intro-media-frame">
+                {% include figure.liquid loading="lazy" path="assets/img/research-3d.svg" class="hero-photo intro-illustration" sizes="300px" alt="3D vision research illustration" %}
+              </div>
               <div class="intro-media-caption">3D vision and world models</div>
             </div>
           </div>
@@ -38,6 +44,12 @@ layout: default
             <li data-target="#intro-media" data-slide-to="1"></li>
             <li data-target="#intro-media" data-slide-to="2"></li>
           </ol>
+          <a class="carousel-control-prev intro-control" href="#intro-media" role="button" data-slide="prev" aria-label="Previous introduction slide">
+            <span class="fa-solid fa-chevron-left" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next intro-control" href="#intro-media" role="button" data-slide="next" aria-label="Next introduction slide">
+            <span class="fa-solid fa-chevron-right" aria-hidden="true"></span>
+          </a>
         </div>
       </div>
     </div>
@@ -47,27 +59,28 @@ layout: default
     <div class="row">
       <div class="col-lg-9">
         <div class="eyebrow">About</div>
-        <h2 class="section-heading">Building more capable, efficient, and understandable AI.</h2>
         <div class="about-copy">
           <p>
-            Sakib is an <strong>M.S. student in Artificial Intelligence at KAIST</strong> and a researcher at the
-            <strong>Statistical Artificial Intelligence Lab (SAIL)</strong>, Kim Jaechul Graduate School of AI, advised by
-            <a href="https://sail.kaist.ac.kr/en/members/jaesik">Prof. Jaesik Choi</a>. His research spans
-            <strong>diffusion and flow matching</strong>, <strong>physical AI and world models</strong>, <strong>3D vision</strong>,
-            <strong>explainable AI</strong>, inference optimization, and multimodal foundation models—with a particular interest in improving the
-            representations, controllability, efficiency, and reasoning capabilities of modern visual and generative AI systems.
+            I am an <strong>M.S. student in Artificial Intelligence at KAIST</strong> and a researcher at the
+            <strong>Statistical Artificial Intelligence Lab (SAIL)</strong>, Kim Jaechul Graduate School of AI, South Korea, advised by
+            <a href="https://sail.kaist.ac.kr/en/members/jaesik">Professor Jaesik Choi</a>.
           </p>
           <p>
-            Before KAIST, he earned a B.Sc. in Computer Science and Engineering from
-            <strong>American International University-Bangladesh (AIUB)</strong>. His research experience includes collaborations with
-            <strong>The University of Queensland, Australia</strong> and <strong>Qatar University, Qatar</strong>. He is also the
-            <strong>Co-Founder &amp; CEO of <a href="https://neurontree.ai/founders-sakib/">NeuronTreeAI</a></strong
-            >, a nonprofit initiative co-founded with Prof. Mohammad Ali Moni to expand AI education, research mentorship, and access to advanced
-            research knowledge.
+            Before joining KAIST, I received my B.Sc. in Computer Science and Engineering from
+            <strong>American International University-Bangladesh (AIUB)</strong>. My research experience has also included work with
+            <strong>The University of Queensland, Australia</strong> and <strong>Qatar University, Qatar</strong>.
           </p>
           <p>
-            His long-term goal is to pursue an academic career while building impactful AI technologies and startups that contribute meaningfully to
-            society. He is currently preparing for PhD applications in the United States.
+            I am also the <strong>Co-Founder &amp; CEO of <a href="https://neurontree.ai/founders-sakib/">NeuronTreeAI</a></strong
+            >, a nonprofit initiative co-founded with <a href="https://neurontree.ai/founders-moni/">Prof. Mohammad Ali Moni</a> focused on AI
+            education, research mentorship, and making advanced research knowledge more accessible.
+          </p>
+          <p>
+            My long-term research goal is to become a <strong>professor at a top university</strong> and
+            <strong>launch an AI startup that empowers society for a better future</strong>.
+            <strong
+              >My primary immediate goal is to secure a PhD position for the Fall 2027 intake at a top-10 university in the United States.</strong
+            >
           </p>
           <p class="contact-callout">
             <i class="fa-solid fa-envelope"></i> For research discussions and collaborations, contact
@@ -115,25 +128,33 @@ layout: default
     <a class="hero-button" href="{{ '/projects/' | relative_url }}">View all projects <i class="fa-solid fa-arrow-right"></i></a>
   </section>
 
-  <section class="home-section">
+  <section class="home-section research-interests">
     <div class="eyebrow">Research at a glance</div>
     <h2 class="section-heading">Core interests</h2>
     <div class="interest-grid">
       <div class="interest-card">
         <h3>Diffusion &amp; Flow Matching</h3>
-        <p>Generative modeling, stochastic interpolants, and efficient sampling.</p>
+        <p>Generative modeling, stochastic interpolants, sampling, scheduler optimization, and efficient generation.</p>
       </div>
       <div class="interest-card">
         <h3>Physical AI &amp; World Models</h3>
-        <p>Visual world modeling, physical reasoning, and scene dynamics.</p>
+        <p>Visual world modeling, physical reasoning, embodied and interactive AI, and scene dynamics.</p>
       </div>
       <div class="interest-card">
         <h3>3D Vision</h3>
-        <p>Geometry-aware learning, reconstruction, rendering, and scene understanding.</p>
+        <p>3D representation learning, geometry-aware learning, scene understanding, reconstruction, and rendering.</p>
       </div>
       <div class="interest-card">
-        <h3>Foundation Models</h3>
-        <p>Explainable, efficient, and multimodal visual intelligence.</p>
+        <h3>Explainable AI</h3>
+        <p>Mechanistic interpretability, neuron polysemanticity, representation analysis, and concept disentanglement.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Inference Optimization</h3>
+        <p>Efficient inference, few-step generation, model acceleration, and test-time optimization.</p>
+      </div>
+      <div class="interest-card">
+        <h3>Multimodal Foundation Models</h3>
+        <p>Vision-language models, multimodal reasoning, cross-modal representations, and foundation model adaptation.</p>
       </div>
     </div>
   </section>
