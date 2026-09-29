@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "Publications",
-          description: "Demo publication records — replace these entries with your own BibTeX file when ready.",
+          description: "Selected research publications by Md Sakib Hossain Shovon.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Demo research projects in computer vision, generative modeling, and 3D perception.",
+          description: "Selected research and applied AI projects.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -32,7 +32,7 @@ ninja.data = [{
           },
         },{id: "nav-cv",
           title: "CV",
-          description: "DEMO CV placeholder — replace the PDF and the entries below with your current academic CV.",
+          description: "Academic background, research experience, and selected work. A current CV PDF will be added soon.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/cv/";
@@ -42,60 +42,55 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-demo-update-developing-a-3d-vision-project-concept-around-sparse-view-visual-understanding",
-          title: 'Demo update: developing a 3D vision project concept around sparse-view visual understanding.',
+            },},{id: "news-started-the-m-s-program-in-artificial-intelligence-at-kaist-and-joined-the-statistical-artificial-intelligence-lab-sail-as-a-graduate-researcher",
+          title: 'Started the M.S. program in Artificial Intelligence at KAIST and joined the Statistical...',
           description: "",
-          section: "News",},{id: "news-demo-update-outlining-a-generative-models-project-for-controllable-visual-world-synthesis",
-          title: 'Demo update: outlining a generative-models project for controllable visual world synthesis.',
+          section: "News",},{id: "news-started-the-sdm-manufacturing-foundation-model-project-a-collaboration-involving-kaist-snu-postech-and-keti",
+          title: 'Started the SDM Manufacturing Foundation Model Project, a collaboration involving KAIST, SNU, POSTECH,...',
           description: "",
-          section: "News",},{id: "news-demo-update-prototyping-a-video-and-motion-research-direction-with-an-example-project-video-workflow",
-          title: 'Demo update: prototyping a video-and-motion research direction with an example project video workflow....',
+          section: "News",},{id: "news-our-work-orthogonal-polynomial-approximation-for-matrix-log-normalization-in-global-covariance-pooling-was-accepted-at-bmvc-2026",
+          title: 'Our work, Orthogonal Polynomial Approximation for Matrix Log Normalization in Global Covariance Pooling,...',
           description: "",
-          section: "News",},{id: "news-demo-update-launched-a-research-portfolio-focused-on-computer-vision-generative-models-video-amp-amp-motion-and-3d-vision",
-          title: 'Demo update: launched a research portfolio focused on computer vision, generative models, video...',
+          section: "News",},{id: "news-submitted-research-works-to-iclr-2027-wacv-2027-and-aaai-2027-in-collaborations-involving-sail-kaist-visual-ai-group-and-neurontreeai",
+          title: 'Submitted research works to ICLR 2027, WACV 2027, and AAAI 2027 in collaborations...',
           description: "",
-          section: "News",},{id: "projects-generative-models-for-structured-visual-worlds",
-          title: 'Generative Models for Structured Visual Worlds',
-          description: "Demo project on controllable image generation guided by scene-level structure.",
+          section: "News",},{id: "projects-automatic-bangla-number-plate-recognition-for-smart-toll-collection",
+          title: 'Automatic Bangla Number Plate Recognition for Smart Toll Collection',
+          description: "An AI project for automatic Bangla vehicle number plate recognition in intelligent toll collection infrastructure.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/generative-models/";
-            },},{id: "projects-video-amp-motion-understanding-in-the-wild",
-          title: 'Video &amp;amp; Motion Understanding in the Wild',
-          description: "Demo project on temporally coherent visual representations for dynamic scenes.",
+              window.location.href = "/projects/bangla-number-plate-recognition/";
+            },},{id: "projects-sdm-manufacturing-foundation-model-project",
+          title: 'SDM Manufacturing Foundation Model Project',
+          description: "An ongoing, large-scale manufacturing foundation model initiative involving leading Korean research institutions.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/video-motion/";
-            },},{id: "projects-3d-vision-from-sparse-observations",
-          title: '3D Vision from Sparse Observations',
-          description: "Demo project on learning geometry-aware representations from partial visual evidence.",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/vision-3d/";
+              window.location.href = "/projects/sdm-manufacturing-foundation-model/";
             },},{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%72%65%70%6C%61%63%65-%6D%65@%65%78%61%6D%70%6C%65.%63%6F%6D", "_blank");
+          window.open("mailto:%73%61%6B%69%62@%6B%61%69%73%74.%61%63.%6B%72", "_blank");
         },
       },{
         id: 'social-github',
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/replace-github-username", "_blank");
+          window.open("https://github.com/Sakib-Hossain-Shovon", "_blank");
         },
       },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/replace-linkedin-username", "_blank");
+          window.open("https://www.linkedin.com/in/md-sakib-hossain-shovon-601738178", "_blank");
         },
       },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=REPLACE_WITH_SCHOLAR_ID", "_blank");
+          window.open("https://scholar.google.com/citations?user=9VM2SHYAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
