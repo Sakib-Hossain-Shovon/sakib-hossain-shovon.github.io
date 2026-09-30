@@ -6,4 +6,4 @@ inline: true
 related_posts: false
 ---
 
-Began a research collaboration with The University of Queensland, Australia, involving artificial intelligence and machine learning.
+Began a research collaboration as a Researcher with The University of Queensland, Australia.

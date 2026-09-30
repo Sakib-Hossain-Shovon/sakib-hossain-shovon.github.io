@@ -2,7 +2,6 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Selected research and applied AI projects.
 nav: true
 nav_order: 3
 display_categories: [research]
@@ -14,11 +13,11 @@ horizontal: false
     {% assign research_projects = site.projects | where: "category", "research" | sort: "importance" %}
     {% for project in research_projects %}
       <div class="col-md-4 mb-4">
-        <article class="research-card">
+        <article class="research-card project-page-card">
           {% if project.youtube_id %}
-            <a class="media-preview" href="{{ project.url | relative_url }}"><img src="https://img.youtube.com/vi/{{ project.youtube_id }}/hqdefault.jpg" alt="YouTube preview for {{ project.title }}"><span class="play-badge"><i class="fa-solid fa-play"></i>Video</span></a>
+            <a class="media-preview project-page-thumb" href="{{ project.url | relative_url }}"><img src="https://img.youtube.com/vi/{{ project.youtube_id }}/hqdefault.jpg" alt="YouTube preview for {{ project.title }}"><span class="play-badge"><i class="fa-solid fa-play"></i>Video</span></a>
           {% else %}
-            <a href="{{ project.url | relative_url }}">{% include figure.liquid path=project.img class="mb-0" sizes="360px" alt=project.title %}</a>
+            <a class="project-page-thumb" href="{{ project.url | relative_url }}">{% include figure.liquid path=project.img class="mb-0" sizes="180px" alt=project.title %}</a>
           {% endif %}
           <div class="research-card-body">
             <h2>{{ project.title }}</h2><p>{{ project.description }}</p>

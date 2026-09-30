@@ -1,8 +1,9 @@
 ---
 layout: post
 date: 2025-09-01 09:00:00+0900
+date_display: 2025
 inline: true
 related_posts: false
 ---
 
-Started the M.S. program in Artificial Intelligence at the Kim Jaechul Graduate School of AI, KAIST, and joined the Statistical Artificial Intelligence Lab (SAIL) as a graduate researcher.
+Started my M.S. in Artificial Intelligence at the <strong>Kim Jaechul Graduate School of AI, KAIST</strong>.
